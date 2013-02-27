@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="uk">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Behat & Mink поспішають на допомогу - Artem Genvald</title>
+
+		<meta name="description" content="Behat & Mink поспішають на допомогу">
+		<meta name="author" content="Artem Genvald">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="css/my.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <!-- Початок -->
+				<section>
+					<h1>Behat & Mink</h1>
+                    <h2>поспішають на допомогу</h2>
+					<p style="margin-top: 50px;">
+                        <em>Artem Genvald</em>
+                        <br />
+                        <small><a href="https://twitter.com/_fre5h">@_fre5h</a></small>
+					</p>
+                    <p style="margin-top: 100px;">
+                        <a href="http://stfalcon.com">
+                            <img src="img/stfalcon-logo.png" class="clear-image" alt="Stfalcon.com" />
+                        </a>
+                        <br />
+                        <small><code>Km Code'n'Coffee #2</code></small>
+                    </p>
+                </section>
+
+                <!-- Тестування? -->
+				<section>
+					<h2>Тестування!?...</h2>
+                    <img src="img/wtf.jpg" alt="Тестування?" />
+				</section>
+
+                <!-- Що дає нам тестування? -->
+                <section>
+                    <h2>Що дає нам тестування?</h2>
+                    <div id="what-is-testing">
+                        <img id="before" src="img/before.png" alt="Before" />
+                        <img id="after" src="img/after.jpg" alt="After" />
+                    </div>
+                    <ol>
+                        <li class="fragment">Безпечний рефакторинг</li>
+                        <li class="fragment">Зменшення кількості багів</li>
+                        <li class="fragment">Краще спроектовану архітектуру програми</li>
+                        <li class="fragment">Документацію для програмістів</li>
+                        <li class="fragment" id="new-level">Перехід на вищий рівень розробки ПЗ</li>
+                    </ol>
+                </section>
+
+                <!-- TDD & BDD -->
+                <section>
+                    <h2>TDD & BDD</h2>
+                    <img src="img/clipcdhappy.png" class="clear-image" alt="Тестування?" />
+                    <h3>Спочатку тест – потім код</h3>
+                </section>
+
+                <!-- Що ж не так? -->
+                <section>
+                    <h2>Що ж не так?</h2>
+                    <div class="half"><h3 class="green">TDD</h3></div>
+                    <div class="half"><h3 class="blue">BDD</h3></div>
+
+                    <p class="fragment">
+                        Про що ми думаємо?
+                    </p>
+                    <p class="fragment half green">
+                        <em>Архітектуру</em>
+                    </p>
+                    <p class="fragment half blue">
+                        <em>Поведінку</em>
+                    </p>
+
+                    <p class="fragment">
+                        Як тестуємо систему?
+                    </p>
+                    <p class="fragment half green">
+                        <em>З середини</em>
+                    </p>
+                    <p  class="fragment half blue">
+                        <em>Ззовні</em>
+                    </p>
+
+                    <p class="fragment">
+                        Якщо міняється архітектура сервера?
+                    </p>
+                    <p class="fragment half green">
+                        <em>Потрібно переписати всі модульні тести</em>
+                    </p>
+                    <p class="fragment half blue">
+                        <em>Ми нічого не знаємо про сервер</em>
+                        <br />
+                        <em>Переписувати нічого не треба</em>
+                    </p>
+
+                    <p class="fragment next-question">
+                        Для замовника
+                    </p>
+                    <p class="fragment half green">
+                        <em>Важко/неможливо читати</em>
+                    </p>
+                    <p class="fragment half blue">
+                        <em>Легко читати</em>
+                        <br />
+                        <em>Легко писати (історії)</em>
+                    </p>
+                </section>
+
+                <!-- Behat -->
+                <section>
+                    <img src="img/behat-logo.png" class="clear-image" alt="Behat" />
+                    <h3>A PHP framework for testing your <strong><em>business</em></strong> expectations</h3>
+                </section>
+
+                <!-- Konstantin Kudryashov -->
+                <section>
+                    <h2>Konstantin Kudryashov</h2>
+                    Creator of Behat and Mink
+                    <blockquote cite="http://everzet.com/"><u>You might think</u> about Behat as <u>a tool to teach your clients</u> about testing, <u>but</u> in reality it's a <u>tool to teach you</u> about client business.</blockquote>
+                </section>
+
+                <!-- Факти про Behat -->
+                <section>
+                    <img src="img/behat-logo.png" class="clear-image" alt="Behat" />
+                    <ul>
+                        <li>Behat був розроблений під вараженням від <strong>Cucumber</strong></li>
+                        <li>PHP-фреймворк <strong>(>=PHP 5.3)</strong> для тестування поведінки додатку</li>
+                        <li><strong>Gherkin DSL</strong> - простий синтаксис для написання історій</li>
+                        <li>Зручне написання тестів за допомогою <strong>аннотацій</strong></li>
+                        <li>Тестування будь-чого, в тому числі і взаємодія з браузерами за допомогою <strong>Mink</strong></li>
+                    </ul>
+                </section>
+
+                <!-- Установка -->
+				<section>
+					<section>
+						<h2>Установка</h2>
+                        <ul>
+                            <li>Composer</li>
+                            <li>PHAR</li>
+                            <li>Git</li>
+                        </ul>
+					</section>
+
+                    <section>
+                        <h2>Composer</h2>
+                        <ol>
+                            <li>Створюємо файл <strong>composer.json</strong> в директорії проекту<pre><code class="json">{
+    "require": {
+        "behat/behat": "2.4.*@stable"
+        },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin/"
+    }
+}</code></pre>
+                            </li>
+                            <li>Завантажуємо <strong>composer.phar</strong> і запускаємо з командою <strong>install</strong>
+                        <pre><code class="code">$ curl http://getcomposer.org/installer | php
+$ php composer.phar install</code></pre>
+                            </li>
+                            <li>І можемо користуватись<pre><code>$ bin/behat</code></pre></li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>PHAR</h2>
+<pre><code>$ wget https://github.com/downloads/Behat/Behat/behat.phar
+$ php behat.phar</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Git</h2>
+                        <ol>
+                            <li>Клонуємо з GitHub<pre>
+<code>$ git clone git://github.com/Behat/Behat.git && cd Behat
+$ git submodule update –init</code></pre>
+                            </li>
+                            <li>Завантажуємо <strong>composer.phar</strong> і запускаємо з командою <strong>install</strong>
+                        <pre><code>$ wget -nc http://getcomposer.org/composer.phar
+$ php composer.phar install</code></pre>
+                            </li>
+                            <li>І можемо користуватись<pre><code>$ bin/behat</code></pre></li>
+                        </ol>
+                    </section>
+				</section>
+
+                <!-- Ініціалізація -->
+                <section>
+                    <h2>Ініціалізація</h2>
+                    <ol>
+                        <li>Виконуємо команду<pre><code>$ behat --init</code></pre></li>
+                        <li>Структура каталогів<pre><code class="no-highlight">|-- features
+   `-- bootstrap
+      `-- FeatureContext.php</code></pre>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><strong>features/</strong> - Файли <em>*.feature</em>, які буде виконувати Behat</li>
+                                <li><strong>features/bootstrap/</strong> - Всі файли <em>*.php</em> з цієї директорії будуть автоматично завантажені перед запуском тестів</li>
+                                <li><strong>features/bootstrap/FeatureContext.php</strong> - Файл контексту, тут будуть знаходиться методи для ваших кроків</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Конфігурація behat.yml -->
+                <section>
+                    <h2>Конфігурація</h2>
+                    <ul>
+                        <li>По замовчуванню конфігурація зберігається в файлі <strong>behat.yml</strong></li>
+                        <li>При потребі можна запустити з іншою конфігурацією:<pre><code>$ behat --config custom-config.yml</code></pre></li>
+                        <li>Приклад конфігурації:
+                            <pre><code class="ini">default:
+    paths:
+        features: features
+        bootstrap: <span class="string">%behat.paths.features%</span>/bootstrap
+
+<span class="keyword">check_errors</span>:
+    filters:
+        tags: "@error"
+    formatter:
+        name: progress
+
+<span class="number">ci</span>:
+    formatter:
+        name:       junit
+        parameters:
+            output_path: /var/tmp/junit</code></pre>
+                        </li>
+                        <li>Запускаємо з різними профілями:<pre><code>$ behat --profile <span class="keyword">check_errors</span>
+$ behat --profile <span class="number">ci</span></code></pre></li>
+                    </ul>
+
+                </section>
+
+                <!-- Gherkin DSL -->
+                <section>
+                    <h2>Gherkin DSL</h2>
+                        <pre><code class="no-highlight"><span class="keyword">Feature</span>: Describe some feature of application
+    <span class="keyword">In order to</span> realize a named business value
+    <span class="keyword">As a</span> some user
+    <span class="keyword">I need</span> to be able to do some action
+
+    <span class="keyword">Background</span>:
+        <span class="keyword">Given</span> prepare system to known stage
+
+    <span class="keyword">Scenario</span>: Check some business logic of application
+        <span class="keyword">Given</span> some precondition
+          <span class="keyword">And</span> some other precondition
+         <span class="keyword">When</span> some action by user
+          <span class="keyword">And</span> some other action
+         <span class="keyword">Then</span> some testable outcome is achieved
+          <span class="keyword">And</span> something else we can check happens too
+          <span class="keyword">But</span> something should not happen</code></pre>
+                </section>
+
+                <!-- Gherkin DSL -->
+                <section>
+                    <h2>Gherkin DSL</h2>
+                        <pre><code class="no-highlight"><span class="keyword">Feature</span>: ... Опис певного функціоналу додатку
+    <span class="keyword">In order to</span> ... Цінність фунціоналу
+    <span class="keyword">As a</span> ... Певний користувач
+    <span class="keyword">I need</span> ... Скористатись певним функціоналом
+
+    <span class="keyword">Background</span>:
+        <span class="keyword">Given</span> ... Приводимо систему у відомий стан
+
+    <span class="keyword">Scenario:</span> ... Перевірка певної бізнес-логіки додатку
+        <span class="keyword">Given</span> ... Початковий стан
+          <span class="keyword">And</span> ... Додаткові вхідні умови
+         <span class="keyword">When</span> ... Користувач виконує певну дію
+          <span class="keyword">And</span> ... І ще одну дію
+         <span class="keyword">Then</span> ... Певеріяємо результат
+          <span class="keyword">And</span> ... Ще одна умова для перевірки
+          <span class="keyword">But</span> ... Але певний результат не повинен з’явитись</code></pre>
+                </section>
+
+                <!-- Приклад з frameworksdays.com -->
+                <section>
+                    <h2>Приклад сценарію з frameworksdays.com</h2>
+                        <pre><code class="no-highlight"><span class="comment"># language: ru</span>
+<span class="keyword">Функционал</span>: Регистрируем пользователя, проверяем автоподписку на активные ивенты
+
+    <span class="keyword">Сценарий</span>: Зайти на страницу регистрации, заполнить все обязательные поля и увидеть сообщение об успешной регистрации
+        <span class="keyword">Допустим</span> я на странице <span class="string">"/register/"</span>
+        <span class="keyword">И</span> я заполняю обязательные поля формы: имя - <span class="string">"Jack Smith"</span>, e-mail - <span class="string">"test@test.com"</span>, пароль - <span class="string">"qwerty"</span>
+        <span class="keyword">Когда</span> я нажимаю <span class="string">"Регистрация"</span>
+        <span class="keyword">Тогда</span> я должен быть на странице <span class="string">"/register/check-email"</span>
+        <span class="keyword">И</span> я должен видеть текст соответствующий <span class="string">"Пользователь успешно создан"</span>
+        <span class="keyword">И</span> я должен видеть текст соответствующий <span class="string">"На электронную почту test@test.com выслано письмо с ссылкой для подтверждения регистрации."</span></code></pre>
+                </section>
+
+                <!-- Matrix -->
+                <section>
+                    <h2>Можемо протестувати поведінку Neo =)</h2>
+                        <pre><code class="no-highlight"><span class="keyword">Feature</span>: Matrix
+    <span class="keyword">In order to</span> broke the Matrix
+    <span class="keyword">As</span> a Neo
+    <span class="keyword">I need</span> to be able to know what is the Matrix
+
+    <span class="keyword">Background</span>:
+        <span class="keyword">Given</span> there is Morpheus
+        <span class="keyword">And</span> there is Neo
+
+    <span class="keyword">Scenario</span>: Neo chooses red pill
+        <span class="keyword">Given</span> there is a blue pill
+          <span class="keyword">And</span> there is a red pill
+         <span class="keyword">When</span> Neo eat red pill
+         <span class="keyword">Then</span> he should stay in Wonderland and see how deep the rabbit-hole goes
+          <span class="keyword">But</span> the story should not end</code></pre>
+                </section>
+
+                <!-- Behat - це не магія -->
+                <section>
+                    <img src="img/dale-explain.jpg" alt="Dale" />
+                    <h2>Але!</h2>
+                    <h3>Behat - це не магія!</h3>
+                </section>
+
+                <!-- Це фреймворк для тестування -->
+                <section>
+                    <img src="img/chip-explain.jpg" alt="Chip" />
+                    <h2>Це фреймворк для тестування!</h2>
+                    <h3>І вам потрібно <em>навчити</em> Behat, як <em>читати</em> ваші сценарії...</h3>
+                </section>
+
+                <!-- Matrix steps snippets -->
+                <section>
+                    <h3>Ось що видасть вам Behat для <em>matrix.feature</em></h3><pre><code id="snippets" class="php">// You can implement step definitions for undefined steps with these snippets:
+
+/** <b>@Given</b> /^there is Morpheus$/ */
+public function thereIsMorpheus() { throw new PendingException(); }
+/** <b>@Given</b> /^there is Neo$/ */
+public function thereIsNeo() { throw new PendingException(); }
+/** <b>@Given</b> /^there is a blue pill$/ */
+public function thereIsABluePill() { throw new PendingException(); }
+/** <b>@Given</b> /^there is a red pill$/ */
+public function thereIsARedPill() { throw new PendingException(); }
+/** <b>@When</b> /^Neo eat red pill$/ */
+public function neoEatRedPill() { throw new PendingException(); }
+/** <b>@Then</b> /^he should stay in Wonderland and see how deep the rabbit-hole goes$/ */
+public function heShouldStayInWonderlandAndSeeHowDeepTheRabbitHoleGoes() { throw new PendingException(); }
+/** <b>@Given</b> /^the story should not end$/ */
+public function theStoryShouldNotEnd() { throw new PendingException(); }</code></pre>
+                </section>
+
+                <!-- Кожен крок - це метод -->
+                <section>
+                    <h2>Кожен крок - це метод</h2>
+                    <pre><code class="php">/**
+ * Feature context
+ */
+class FeatureContext extends MinkContext
+{
+    /**
+     * Go to the homepage and check that it is enabled
+     * and returns status code 200
+     *
+     * <b>@Given</b> /^I am on the homepage$/
+     */
+    public function iAmOnHomepage()
+    {
+        $this->visit('/');
+        $this->assertResponseStatus(200);
+    }
+}</code></pre>
+                </section>
+
+                <!-- @Given, @When, @Then -->
+                <section>
+                    <h2>@Given, @When, @Then</h2>
+                    <ul>
+                        <li>Кроки описуються в файлі <strong>FeatureContext.php</strong></li>
+                        <li><strong>@And</strong>, <strong>@But</strong> - допоміжні кроки для спрощення речень</li>
+                        <li>Behat відноситься до всіх кроків однаково, але ви повинні <strong>по різному!</strong></li>
+                        <li>Якщо крок <em>не згенерував exception</em> - він <em>пройшов успішно</em></li>
+                        <li>Використовуємо <em>assert</em>-методи з <strong>PHPUnit</strong></li>
+                    </ul>
+                </section>
+
+                <!-- Запуск тестів з консолі -->
+                <section>
+                    <h2>Запуск тестів з консолі</h2>
+                    <ul>
+                        <li>Запустити всі тести:
+                            <pre><code class="no-highlight">$ behat</code></pre>
+                        </li>
+                        <li>Запустити окрему фічу:
+                            <pre><code class="no-highlight">$ behat features/some.feature</code></pre>
+                            або
+                            <pre><code class="no-highlight">$ behat --name=<span class="string">"Feature name"</span></code></pre>
+                        </li>
+                        <li>Запустити окремий сценарій з деякої фічі:
+                            <pre><code class="no-highlight">$ behat features/some.feature:<span class="number">15</span></code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- MetaSteps -->
+                <section>
+                    <section>
+                        <h2>MetaSteps</h2>
+                        <h3>Якщо є часто використовувана частина сценарія</h3>
+                        <pre><code class="no-highlight"><span class="keyword">Feature</span>: Partner feature
+    ...
+
+    <span class="keyword">Scenario</span>: Login as partner
+        <span class="keyword">Given</span> I am on the partner login page
+         <span class="keyword">When</span> I fill in <span class="string">"_username"</span> with <span class="string">"partner@test.com"</span>
+          <span class="keyword">And</span> I fill in <span class="string">"_password"</span> with <span class="string">"qwerty"</span>
+          <span class="keyword">And</span> I press <span class="string">"Login"</span>
+         <span class="keyword">Then</span> I should be authenticated as partner user</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>MetaSteps</h2>
+                        <h3>Об’єднуємо методи в один</h3>
+                        <pre><code class="php">/**
+ * Login as partner
+ *
+ * <b>@Given</b> /^I login as partner$/
+ */
+public function iLoginAsPartner()
+{
+    $this->iAmOnPartnerLoginPage();
+    $this->fillField('_username', 'partner@test.com');
+    $this->fillField('_password', '1234');
+    $this->pressButton('Login');
+    $this->iShouldBeAuthenticatedAsPartner();
+}</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>MetaSteps</h2>
+                        <h3>Отримуємо профіт</h3>
+                        <pre><code class="no-highlight"><span class="keyword">Feature</span>: Partner feature
+    ...
+
+    <span class="keyword">Scenario</span>: Some action for partner
+        <span class="comment"># Use metastep</span>
+        <span class="keyword">Given</span> I login as partner
+        <span class="keyword">When</span> I do something
+        <span class="keyword">Then</span> I should get some result</code></pre>
+                    </section>
+                </section>
+
+                <!-- Background -->
+                <section>
+                    <h2>Background</h2>
+                    <h3>Приводимо систему у відомий стан</h3>
+                    <pre><code class="no-highlight"><span class="keyword">Feature</span>: Blog
+
+    <span class="keyword">Background</span>:
+        <span class="keyword">Given</span> an admin user named <span class="string">"John"</span> with password <span class="string">"FjG#@)Gg8"</span>
+          <span class="keyword">And</span> a user named <span class="string">"Jack"</span> with password <span class="string">"qwerty"</span>
+
+    <span class="keyword">Scenario</span>: Some action
+        ...
+
+    <span class="keyword">Scenario</span>: Another action
+        ...</code></pre>
+                    Буде виконуватись перед початком кожного сценарія
+                </section>
+
+                <!-- Hooks -->
+                <section>
+                    <h2>Hooks</h2>
+                    <ul>
+                        <li>@BeforeSuite, @AfterSuite - виконуються для <em>всіх</em> фіч</li>
+                        <li>@BeforeFeature, @AfterFeature - виконуються для <em>кожної</em> фічі</li>
+                        <li>@BeforeScenario, @AfterScenario - виконуються для <em>кожного</em> сценарію</li>
+                        <li>@BeforeStep, @AfterStep - виконується для <em>кожного</em> кроку</li>
+                    </ul>
+                    <pre><code class="php">/** @BeforeFeature */
+public static function setupFeature(FeatureEvent $event)
+{
+    // prepare something
+}
+
+/** @AfterFeature */
+public static function teardownFeature(FeatureEvent $event)
+{
+    // clean something
+}
+                    </code></pre>
+                </section>
+
+                <!-- Tags -->
+                <section>
+                    <h2>Tags</h2>
+                    <ul>
+                        <li><pre><code class="no-highlight"><span class="number">@blog</span>
+    <span class="keyword">Feature</span>: Blog
+        ...
+
+    <span class="number">@login</span>
+    <span class="keyword">Scenario</span>: User login
+        ...</code></pre>
+                        </li>
+                        <li>Можна запускати певні сценарії:
+                            <pre><code>$ behat --tags '@login,@logout'
+$ behat --tags 'login,error'
+$ behat --tags '@login&&@admin'
+$ behat --tags '~@error'</code></pre>
+                        </li>
+                        <li>Можна кастомізувати хуки для <em>конкретних</em> сценаріїв:
+                            <pre><code class="php">/**
+ * Load fixtures for Voucher feature
+ *
+ * <b>@BeforeScenario</b> @voucher-feature
+ */
+public function loadFixturesForVoucherFeature()
+{
+    $this->loadFixtures('Path\To\Fixtures\VoucherFeature');
+}</code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ScenarioOutline -->
+                <section>
+                    <h2>ScenarioOutline</h2>
+                    Повторення сценарію з різними вхідними даними:
+                    <pre><code class="no-highlight"><span class="number">@booking-search-feature</span>
+<span class="keyword">Feature</span>: Booking search
+    <span class="keyword">In order to</span> book tickets
+    <span class="keyword">As a</span> site visitor
+    <span class="keyword">I need</span> to be able to access the booking page and search trips
+
+    <span class="number">@currency</span>
+    <span class="keyword">Scenario Outline</span>: Check switching the currency
+        <span class="keyword">Given</span> I am on the booking search page
+          <span class="keyword">And</span> current currency is <span class="string">&lt;current currency&gt;</span>
+         <span class="keyword">When</span> I switch currency to <span class="string">&lt;new currency&gt;</span>
+         <span class="keyword">Then</span> current currency should be <span class="string">&lt;new currency&gt;</span>
+
+        <span class="keyword">Examples</span>:
+                | <span class="string">current currency</span> | <span class="string">new currency</span> |
+                | Euro             | Swiss Franks |
+                | Swiss Franks     | Euro         |</code></pre>
+                </section>
+
+                <!-- TableNode -->
+                <section>
+                    <h2>TableNode</h2>
+                    Декілька однотипних речень:
+                    <pre><code class="no-highlight"><span class="keyword">Scenario</span>: Emergency
+    <span class="keyword">Given</span> a department named <span class="string">"Fire</span>" with email <span class="string">"101@help.com"</span> and phone <span class="string">"101"</span>
+      <span class="keyword">And</span> a department named <span class="string">"Police"</span> with email <span class="string">"102@help.com"</span> and phone <span class="string">"102"</span>
+      <span class="keyword">And</span> a department named <span class="string">"Medic"</span> with email <span class="string">"103@help.com"</span> and phone <span class="string">"103"</span>
+      ...</code></pre>
+                    Можна представити у вигляді таблиці:
+                    <pre><code class="no-highlight"><span class="keyword">Scenario</span>: Emergency
+    <span class="keyword">Given</span> the following departments:
+        | <span class="string">name</span>   | <span class="string">email</span>                | <span class="string">phone</span> |
+        | Fire   | firefighter@test.com | 101   |
+        | Police | cop@test.com         | 102   |
+        | Medic  | doctor@test.com      | 103   |
+     ...</code></pre>
+                </section>
+
+                <!-- PyStringNode -->
+                <section>
+                    <h2>PyStringNode</h2>
+                    Тестуємо довгі повідомлення:
+                    <pre><code class="no-highlight"><span class="number">@cart @alert</span>
+<span class="keyword">Scenario</span>: Checkout cart item with identical depart and return dates
+    <span class="keyword">Given</span> I am on the booking search page
+      <span class="keyword">And</span> I search for a trip from <span class="string">"Freiburg"</span> to <span class="string">"München"</span> on <span class="string">"01.02.2015"</span> and back on <span class="string">"01.02.2015"</span> for <span class="string">1</span> adult, <span class="string">0</span> children and <span class="string">0</span> bike
+      <span class="keyword">And</span> I put selected items for ride that departs at <span class="string">"09:00"</span> to the cart
+      <span class="keyword">And</span> the total price should be <span class="string">"25,50"</span> in <span class="string">"EUR"</span>
+     <span class="keyword">When</span> I checkout selected items
+     <span class="keyword">Then</span> I should be on the booking search page
+      <span class="keyword">And</span> I should see cart validate alert block with message:
+    <span class="string">"""
+    * Der Preis einer Tages-Rückfahrt gilt nur bei Hin- und Rückfahrt am selben Tag. Bitte ändern Sie Ihre Buchung oder Aktualisieren Sie den Preis
+    """</span></code></pre>
+
+                </section>
+
+                <!-- Mink -->
+                <section>
+                    <img src="img/mink-logo.png" class="clear-image" alt="Behat" />
+                    <h3>Acceptance test framework for <strong>web</strong> applications</h3>
+                </section>
+
+                <!-- Факти про Mink -->
+                <section>
+                    <img src="img/mink-logo.png" class="clear-image" alt="Behat" />
+                    <ul>
+                        <li>PHP-фреймворк <strong>(>=PHP 5.3)</strong> для тестування <strong>веб-</strong>додатку</li>
+                        <li>Надає <strong>API</strong> для роботи з <em>різними</em> емуляторами браузерів</li>
+                        <li>Підтримувані емулятори браузерів:
+                            <ul>
+                                <li>Goutte</li>
+                                <li>Zombie.js</li>
+                                <li>Selenium</li>
+                                <li>Selenium2</li>
+                                <li>Sahi</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Установка -->
+                <section>
+                    <h2>Установка</h2>
+                    <ul>
+                        <li>Приклад <strong>composer.json</strong> для встановлення <strong>Mink</strong><pre><code class="json">{
+    "require": {
+        "behat/mink": "*",
+
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-sahi-driver": "*",
+        "behat/mink-zombie-driver": "*"
+    }
+}</code></pre>
+                        </li>
+                        <li>Також доступна установка через <strong>PHAR</strong> і <strong>Git</strong></li>
+                    </ul>
+                </section>
+
+                <!-- Можливості Mink-->
+                <section>
+                    <h2>Можливості Mink</h2>
+                    <ul>
+                        <li>Контроль браузера через об’єкт <strong>Session</strong>:
+                            <ul>
+                                <li>Навігація по сторінкам</li>
+                                <li>Cookie</li>
+                                <li>Заголовки</li>
+                                <li>HTTP Authentication</li>
+                            </ul>
+                        </li>
+                        <li>Доступ до елементів сторінки через <strong>селектори</strong>:
+                            <ul>
+                                <li>Named</li>
+                                <li>CSS</li>
+                                <li>XPath</li>
+                                <li>ﬁnd* Methods</li>
+                            </ul>
+                        </li>
+                        <li>Над вибраними елементами ми можемо робити:
+                            <ul>
+                                <li>Зчитувати значення атрибутів</li>
+                                <li>Емулювати події браузера</li>
+                                <li>Заповняти форми, відмічати чекбокси, приєдувати файли і т.д.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Mink & Behat -->
+                <section>
+                    <h2>Mink & Behat</h2>
+                    <ul>
+                        <li><em>Mink</em> підключається до <em>Behat</em> за допомогою <strong>Mink extension</strong>
+                            <pre><code class="json">{
+    "require": {
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4.*@stable",
+
+        "behat/mink-extension": "*",
+
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin/"
+    }
+}</code></pre>
+                        </li>
+                        <li><em>Mink</em> також можна використовувати <strong>окремо</strong></li>
+                        <li>
+                            Для тестування <em>JavaScript</em> - потрібно додати тег <strong>@javascript</strong>
+                            <pre><code class="no-highlight"><span class="number">@javascript</span>
+<span class="keyword">Scenario</span>: Page with come AJAX requests
+    ...</code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Дякую за увагу -->
+                <section>
+                    <h2>Дякую за увагу</h2>
+                    <img src="img/end.png" alt="Дякую за увагу" />
+                    <h3>Питання?</h3>
+                </section>
+
+                <!-- Посилання -->
+                <section>
+                    <h2>Посилання</h2>
+                    <img src="img/team.jpg" alt="Посилання" />
+                    <p>
+                        <a href="http://behat.org/">Behat</a>
+                        <br />
+                        <a href="http://mink.behat.org/">Mink</a>
+                        <br />
+                        <a href="http://everzet.com/">Konstantin Kudryashov</a>
+                        <br />
+                        <a href="https://github.com/hakimel/reveal.js">reveal.js</a>
+                    </p>
+                    <hr />
+                    <p>
+                        Artem Genvald - <a href="http://about.me/fre5h">About me</a>
+                    </p>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+            $('#after').hide();
+
+            Reveal.addEventListener( 'fragmentshown', function(event) {
+                if (event.fragment.id == 'new-level') {
+                    $('#before').hide();
+                    $('#after').show();
+                }
+            } );
+
+            Reveal.addEventListener( 'fragmenthidden', function(event) {
+                if (event.fragment.id == 'new-level') {
+                    $('#after').hide();
+                    $('#before').show();
+                }
+            } );
+            Reveal.initialize({
+				controls: true,
+				progress: true,
+				history:  true,
+				center:   true,
+
+                width:  1000,
+                height: 750,
+
+				theme:      Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
