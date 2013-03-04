@@ -1,65 +1,108 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>Fre5h.github.com by fre5h</title>
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="javascripts/main.js"></script>
+        <title>Artem Genvald - fre5h.github.com</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Artem Genvald Github page">
+        <meta name="author" content="Artem Genvald">
+
+        <!-- Le styles -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/fresh.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="../assets/js/html5shiv.js"></script>
         <![endif]-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../assets/ico/favicon.png">
     </head>
+
     <body>
+        <!-- Part 1: Wrap all page content here -->
+        <div id="wrap">
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="http://fre5h.github.com/">fre5h.github.com</a>
 
-        <header>
-            <h1>Fre5h.github.com</h1>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="https://github.com/fre5h">View on GitHub</a></li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
 
-            <p></p>
-        </header>
+            <div class="container">
+                <h1>Artem Genvald</h1>
 
-        <div id="banner">
-            <span id="logo"></span>
+                <p>This is my GitHub homepage. Here I will post all links related to me and my open-source projects.</p>
 
-            <a href="https://github.com/fre5h" class="button fork"><strong>View On GitHub</strong></a>
+                <div id="presentations" class="well">
+                    <h2>My presentations</h2>
+                    <ol>
+                        <li>
+                            <a href="presentations/behat-mink-rescue-rangers/index.html">Behat & Mink поспішають на допомогу</a>
+                            (in ukrainian language <img src="images/flags/Ukraine-Flag-icon.png" alt="Ukrainian language" />)
+                            <br />
+                            Presented on <a href="https://plus.google.com/u/0/events/ccucu74i65kstq28ubgatglvm7c">Km Code'n'Coffee #2</a> [28.02.2013]
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="social-links" class="well">
+                    <h2>My social links</h2>
+                    <ul>
+                        <li><a href="https://github.com/fre5h">GitHub</a></li>
+                        <li><a href="https://plus.google.com/u/0/107290527903043166258/about">Google+</a></li>
+                        <li><a href="https://www.facebook.com/artem.genvald">Facebook</a></li>
+                        <li><a href="http://twitter.com/_fre5h">Twitter</a></li>
+                        <li><a href="http://www.linkedin.com/pub/artem-genvald/51/974/a90">LinkedIn</a></li>
+                        <li><a href="http://about.me/fre5h">About.me</a></li>
+                        <li><a href="https://connect.sensiolabs.com/profile/artemgenvald">SensioLabsConnect</a></li>
+                        <li><a href="http://www.youtube.com/user/genvaldartem">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /container -->
         </div>
-        <!-- end banner -->
 
-        <div class="wrapper">
-            <nav>
-                <ul></ul>
-            </nav>
-            <section>
-                <h3>Мої доповіді</h3>
-
-                <ul>
-                    <li><a href="presentations/behat-mink-rescue-rangers/index.html">Behat & Mink поспішають на допомогу</a></li>
-                </ul>
-            </section>
+        <div id="footer">
+            <div class="container">
+                <p class="muted credit">&copy; Artem Genvald, 2013
+            </div>
         </div>
-        <footer>
-            <p>Artem Genvald - <a href="http://about.me/fre5h">about me</a></small></p>
-        </footer>
-        <!--[if !IE]>
-        <script>fixScale(document);</script><![endif]-->
 
         <script type="text/javascript">
-
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-38911005-1']);
             _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www')
+                    + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
             })();
-
         </script>
-
     </body>
 </html>
