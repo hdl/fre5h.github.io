@@ -1,0 +1,35 @@
+#before, #after {
+    margin: 0;
+    padding: 0;
+}
+
+img.clear-image {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+p.half,
+div.half {
+    float: left;
+    width: 50%
+}
+
+.blue {
+    color: blue !important;
+}
+
+.green {
+    color: green !important;
+}
+
+.next-question {
+    margin-top: 10px;;
+}
+
+.reveal .slides {
+    max-width: 1100px;
+}
+
+#snippets {
+    font-size: 15px;
+}
