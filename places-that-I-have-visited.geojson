@@ -151,7 +151,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [25.75б 50.416667]
+                "coordinates": [25.75, 50.416667]
             },
             "properties": {
                 "City": "Dubno",
