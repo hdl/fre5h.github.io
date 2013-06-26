@@ -15,7 +15,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [47.994722, 7.849722]
+                "coordinates": [7.849722, 47.994722]
             },
             "properties": {
                 "City": "Freiburg",
