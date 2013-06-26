@@ -4,11 +4,11 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [52.516667, 13.383333]
+                "coordinates": [13.383333, 52.516667]
             },
             "properties": {
                 "City": "Berlin",
-                "April 2013": "Business Trip"
+                "April 2013": "Business trip"
             }
         },
         {
@@ -19,7 +19,19 @@
             },
             "properties": {
                 "City": "Freiburg",
-                "27 April 2013": "Business Trip. Celebration of the first birthday of MeinFernbus.de"
+                "27 April 2013": "Business trip. Celebration of the first birthday of MeinFernbus.de"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.849722, 47.994722]
+            },
+            "properties": {
+                "City": "Warnemünde",
+                "1 May 2013": "Tourist trip",
+                "Test link": "http://google.com"
             }
         }
     ]
