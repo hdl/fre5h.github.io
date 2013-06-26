@@ -86,9 +86,121 @@
                 "coordinates": [27.333333, 53.75]
             },
             "properties": {
-                "City": "Nesvizh",
+                "City": "Fanipol",
                 "July 2012": "Tourist trip"
             }
-        }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.523333, 50.45]
+            },
+            "properties": {
+                "City": "Kyiv",
+                "A lot of times": "Capital of Ukraine"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [24.016667, 49.85]
+            },
+            "properties": {
+                "City": "Lviv",
+                "Autumn 2009": "Tourist trip",
+                "Summer 2010": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.216667, 48.75]
+            },
+            "properties": {
+                "City": "Uman",
+                "Spring 2008": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.335833, 50.75]
+            },
+            "properties": {
+                "City": "Lutsk",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.716667, 50.119722]
+            },
+            "properties": {
+                "City": "Kremenets",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.75б 50.416667]
+            },
+            "properties": {
+                "City": "Dubno",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.777778, 49.666667]
+            },
+            "properties": {
+                "City": "Zbarazh",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.519722, 50.329167]
+            },
+            "properties": {
+                "City": "Ostroh",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.746111, 50.14]
+            },
+            "properties": {
+                "City": "Bilokrynytsia",
+                "Spring 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.709444, 50.385556]
+            },
+            "properties": {
+                "City": "Tarakanivskyi Fort",
+                "Spring 2012": "Tourist trip"
+            }
+        },
     ]
 }
