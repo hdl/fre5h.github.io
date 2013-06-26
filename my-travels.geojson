@@ -1,38 +1,26 @@
 { "type": "FeatureCollection",
     "features": [
-        { "type": "Feature",
+        {
+            "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [102.0, 0.5]
-            },
-            "properties": {"prop0": "value0"}
-        },
-        { "type": "Feature",
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]
-                ]
+                "coordinates": [52.516667, 13.383333]
             },
             "properties": {
-                "prop0": "value0",
-                "prop1": 0.0
+                "City": "Berlin",
+                "April 2013": "Business Trip"
             }
         },
-        { "type": "Feature",
+        {
+            "type": "Feature",
             "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
-                      [100.0, 1.0], [100.0, 0.0] ]
-                ]
+                "type": "Point",
+                "coordinates": [47.994722, 7.849722]
             },
             "properties": {
-                "prop0": "value0",
-                "prop1": {
-                    "this": "that"
-                }
+                "City": "Berlin",
+                "27 April 2013": "Business Trip. Celebration of the first birthday of MeinFernbus.de"
             }
-        }
+        },
     ]
 }
