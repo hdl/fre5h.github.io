@@ -30,9 +30,65 @@
             },
             "properties": {
                 "City": "Warnemünde",
-                "1 May 2013": "Tourist trip",
-                "Test link": "http://google.com"
+                "1 May 2013": "Tourist trip"
             }
-        }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.616667, 55.75]
+            },
+            "properties": {
+                "City": "Moscow",
+                "August 2012": "Tourist trip"
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.566667, 53.9]
+            },
+            "properties": {
+                "City": "Minsk",
+                "July 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.466667, 53.45]
+            },
+            "properties": {
+                "City": "Mir",
+                "July 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.666667, 53.216667]
+            },
+            "properties": {
+                "City": "Nesvizh",
+                "July 2012": "Tourist trip"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.333333, 53.75]
+            },
+            "properties": {
+                "City": "Nesvizh",
+                "July 2012": "Tourist trip"
+            }
+        },
     ]
 }
