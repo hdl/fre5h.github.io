@@ -9,8 +9,7 @@
         <meta name="keywords" content="Artem Genvald GitHub">
         <meta name="author" content="Artem Genvald">
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/fresh.css">
 
         <link rel="shortcut icon" href="img/favicon.png" />
@@ -18,58 +17,125 @@
     </head>
 
     <body>
-        <header class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
-                    <a class="brand" href="http://fre5h.github.io/">
-                        <img src="img/logo.png" alt="Fresh logo" /> fre5h.github.io
-                    </a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="https://github.com/fre5h" title="View on Github">View on GitHub</a></li>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="http://fre5h.github.io/">fre5h.github.io</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="https://github.com/fre5h" target="_blank" title="View on Github">View on GitHub</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
 
         <div id="wrap">
             <div class="container">
                 <h1>Artem Genvald</h1>
-                <p>This is my GitHub homepage. Here I will post all links related to me and my open-source projects.</p>
+                <p class="lead">This is my GitHub homepage. Here I will post all links related to me and my open-source projects.</p>
 
-                <section id="presentations" class="well">
-                    <h2>My presentations</h2>
-                    <ol>
-                        <li>
-                            <a href="presentations/behat-mink-rescue-rangers/index.html">Behat & Mink поспішають на допомогу</a>
-                            (in ukrainian language <img src="img/flags/Ukraine-Flag-icon.png" alt="Ukrainian language" />)
-                            <br />
-                            Presented on <a href="https://plus.google.com/u/0/events/ccucu74i65kstq28ubgatglvm7c">Km Code'n'Coffee #2</a> [28.02.2013]
-                        </li>
-                        <li>
-                            <a href="presentations/behat-mink-rescue-rangers-en/index.html">Behat & Mink rescue rangers</a>
-                            Presented specially for <a href="http://meinfernbus.de"> MeinFernbus.de</a> [29.04.2013]
-                        </li>
-                    </ol>
-                </section>
-
-                <section id="social-links" class="well">
-                    <h2>My social links</h2>
-                    <ul>
-                        <li><a href="https://github.com/fre5h" title="Profile on GitHub" rel="me">GitHub</a></li>
-                        <li><a href="https://plus.google.com/107290527903043166258?rel=author" rel=”author” title="Profile on Google+" rel="me">Google+</a></li>
-                        <li><a href="https://www.facebook.com/artem.genvald" title="Profile on Facebook" rel="me">Facebook</a></li>
-                        <li><a href="http://twitter.com/_fre5h" title="Profile on Twitter" rel="me">Twitter</a></li>
-                        <li><a href="http://instagram.com/_fre5h" title="Profile on Instagram" rel="me">Instagram</a></li>
-                        <li><a href="https://foursquare.com/_fre5h" title="Profile on Foursquare" rel="me">Foursquare</a></li>
-                        <li><a href="http://www.linkedin.com/pub/artem-genvald/51/974/a90" title="Profile on LinkedIn" rel="me">LinkedIn</a></li>
-                        <li><a href="http://www.codeschool.com/users/Fresh" title="Profile at Code School" rel="me">Code School</a></li>
-                        <li><a href="http://about.me/fre5h" title="Profile on About.me" rel="me">About.me</a></li>
-                        <li><a href="https://connect.sensiolabs.com/profile/artemgenvald" title="Profile on SensioLabsConnect" rel="me">SensioLabsConnect</a></li>
-                        <li><a href="http://www.youtube.com/user/genvaldartem" title="Profile on YouTube" rel="me">YouTube</a></li>
-                    </ul>
-                </section>
+                <div class="row">
+                    <div class="col-md-5">
+                        <section class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Presentations</h3>
+                            </div>
+                            <ul id="presentations" class="list-group">
+                                <li class="list-group-item">
+                                    <h4>
+                                        <a href="presentations/behat-mink-rescue-rangers/index.html" target="_blank">Behat & Mink поспішають на допомогу</a>
+                                    </h4>
+                                    Presented on <a href="https://plus.google.com/u/0/events/ccucu74i65kstq28ubgatglvm7c">Km Code'n'Coffee #2</a> <time datetime="2013-02-28">[28.02.2013]</time>
+                                    <br />
+                                    <img src="img/flags/Ukraine-Flag-icon.png" alt="Ukrainian language" /> ukrainian language
+                                </li>
+                                <li class="list-group-item">
+                                    <h4>
+                                        <a href="presentations/behat-mink-rescue-rangers-en/index.html" target="_blank">Behat & Mink. Rescue rangers</a>
+                                    </h4>
+                                    Presented specially for <a href="http://meinfernbus.de">MeinFernbus.de</a> <time datetime="2013-04-29">[29.04.2013]</time>
+                                    <br />
+                                    <img src="img/flags/United-Kingdom-flag-icon.png" alt="English language" /> english language
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col-md-5">
+                        <section class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Open Source</h3>
+                            </div>
+                            <ul id="open-source" class="list-group">
+                                <li class="list-group-item">
+                                    <a href="https://github.com/fre5h/DoctrineEnumBundle" target="_blank">FreshDoctrineEnumBundle</a>
+                                    <br />
+                                    <a href="https://travis-ci.org/fre5h/DoctrineEnumBundle">
+                                        <img src="https://secure.travis-ci.org/fre5h/DoctrineEnumBundle.png?branch=master" alt="Build Status" style="max-width: 100%;"/>
+                                    </a>
+                                    <a href="https://packagist.org/packages/fresh/doctrine-enum-bundle">
+                                        <img src="https://poser.pugx.org/fresh/doctrine-enum-bundle/v/stable.png" alt="Latest Stable Version" style="max-width: 100%;"/>
+                                    </a>
+                                    <a href="https://packagist.org/packages/fresh/doctrine-enum-bundle">
+                                        <img src="https://poser.pugx.org/fresh/doctrine-enum-bundle/downloads.png" alt="Total Downloads" style="max-width: 100%;"/>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://github.com/fre5h/fwdays" target="_blank">Frameworks Days</a>
+                                    <br />
+                                    <a href="https://travis-ci.org/stfalcon/fwdays">
+                                        <img src="https://secure.travis-ci.org/stfalcon/fwdays.png?branch=master" alt="Build Status" style="max-width: 100%;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col-md-2">
+                        <section class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Social Links</h3>
+                            </div>
+                            <ul id="social-links" class="list-group">
+                                <li class="list-group-item">
+                                    <a href="https://github.com/fre5h" title="Profile on GitHub" target="_blank" rel="me">GitHub</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://plus.google.com/107290527903043166258?rel=author" rel="author" title="Profile on Google+" target="_blank" rel="me">Google+</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.facebook.com/artem.genvald" title="Profile on Facebook" target="_blank" rel="me">Facebook</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://twitter.com/_fre5h" title="Profile on Twitter" target="_blank" rel="me">Twitter</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://instagram.com/_fre5h" title="Profile on Instagram" target="_blank" rel="me">Instagram</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://foursquare.com/_fre5h" title="Profile on Foursquare" target="_blank" rel="me">Foursquare</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://www.linkedin.com/pub/artem-genvald/51/974/a90" title="Profile on LinkedIn" target="_blank" rel="me">LinkedIn</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://www.codeschool.com/users/Fresh" title="Profile at Code School" target="_blank" rel="me">Code School</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://about.me/fre5h" title="Profile on About.me" target="_blank" rel="me">About.me</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://connect.sensiolabs.com/profile/artemgenvald" title="Profile on SensioLabsConnect" target="_blank" rel="me">SensioLabsConnect</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://www.youtube.com/user/genvaldartem" title="Profile on YouTube" target="_blank" rel="me">YouTube</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -80,5 +146,7 @@
         </footer>
 
         <script src="js/google-analytics.js"></script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
